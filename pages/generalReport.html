@@ -1,0 +1,108 @@
+<div class="box" style="padding: 20px 20px 20px 20px">
+    <br>
+
+    <div class="box collapsed-box">
+        <div class="box-header with-border">
+            <h3 class="box-title">Recaudacion por tiendas</h3>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="box-body">
+              <table id="tAmountPerShop" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>Tienda</th>
+                    <th>Monto</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="x in AmountPerShop">
+                        <td>{{x.name}}</td>
+                        <td>{{x.amount}}</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="box collapsed-box">
+        <div class="box-header with-border">
+            <h3 class="box-title">Ventas por porducto</h3>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" id="date-btn-1">
+                    <span>
+                      <i class="fa fa-calendar"></i>
+                    </span>
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="box-body">
+            <table id="tBillsPerProducts" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>Tienda</th>
+                    <th>Producto</th>
+                    <th>Unidades</th>
+                    <th>Precio</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="x in BillsPerProducts">
+                        <td>{{x.nameShop}}</td>
+                        <td>{{x.product}}</td>
+                        <td>{{x.units}}</td>
+                        <td>{{x.price}}</td>
+                        <td>{{x.price*x.units}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="box collapsed-box">
+        <div class="box-header with-border">
+            <h3 class="box-title">Mejores Clientes</h3>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" id="date-btn-2">
+                    <span>
+                      <i class="fa fa-calendar"></i>
+                    </span>
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="box-body">
+            <table id="ttopClients" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Total facturado</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="x in topClients">
+                        <td>{{x.name}}</td>
+                        <td>{{x.lname}}</td>
+                        <td>{{x.amount}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
